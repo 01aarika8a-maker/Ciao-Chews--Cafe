@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciao Chews - Fine Dining Restaurant</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Theme Toggle Switch (Hidden) -->
+    <input type="checkbox" id="theme-toggle" class="hidden-toggle">
+
+    <!-- Mobile Nav Menu Toggle (Hidden) -->
+    <input type="checkbox" id="mobile-nav-toggle" class="hidden-toggle">
+
+    <!-- Booking Modal Toggle (Hidden) -->
+    <input type="checkbox" id="booking-modal-toggle" class="hidden-toggle">
+
+    <div class="site-wrapper">
+
+        <!-- Main Navigation Header -->
+        <header class="main-header">
+            <div class="container nav-container">
+                <a href="#" class="logo"><span>Ciao Chews</span></a>
+
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#specials" class="nav-link">Specials</a></li>
+                    <li><a href="#chefs" class="nav-link">Chefs</a></li>
+                    <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                </ul>
+
+                <div class="header-actions">
+                    <!-- Light/Dark Mode Switcher -->
+                    <div class="theme-switch-container">
+                        <label for="theme-toggle" class="theme-switch-label" title="Toggle Light/Dark Theme">
+                            <span class="theme-switch-icon" style="margin-left: 4px;">🌙</span>
+                            <span class="theme-switch-icon" style="margin-right: 4px;">☀️</span>
+                            <span class="theme-switch-ball"></span>
+                        </label>
+                    </div>
+
+                    <!-- Book a Table Button (Triggers Checkbox) -->
+                    <label for="booking-modal-toggle" class="btn btn-primary">Book a Table</label>
+
+                    <!-- Mobile Hamburger Menu Button -->
+                    <label for="mobile-nav-toggle" class="mobile-nav-toggle-label">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-bg">
+                <img src="https://etimg.etb2bimg.com/photo/88724301.cms" alt="Restaurant Interior Ambiance">
+            </div>
+            <div class="hero-content">
+                <span class="hero-subtitle">Welcome to the Ciao Chews Dinner</span>
+                <h1 class="hero-title">Take a Seat, Grab a Treat</h1>
+                <p class="hero-desc">
+                    A fancy, or fine-dining restaurant offers a premium culinary experience characterized by
+                    chef-driven, high-quality cuisine, impeccable table service, and an elegant, upscale ambiance.
+                    Guests can expect multi-course meals, curated wine pairings, and meticulous attention to detail from
+                    a highly trained staff.
+                </p>
+                <div class="hero-btns">
+                    <a href="#menu" class="btn btn-primary">See Our Menu</a>
+                    <label for="booking-modal-toggle" class="btn btn-secondary">Reserve Now</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Category Filter Inputs (Must be sibling of menu content wrapper for CSS selector logic) -->
+        <input type="radio" name="menu-filter" id="cat-all" checked class="hidden-toggle">
+        <input type="radio" name="menu-filter" id="cat-starters" class="hidden-toggle">
+        <input type="radio" name="menu-filter" id="cat-mains" class="hidden-toggle">
+        <input type="radio" name="menu-filter" id="cat-specials" class="hidden-toggle">
+        <input type="radio" name="menu-filter" id="cat-drinks" class="hidden-toggle">
+
+        <!-- Interactive Menu Section -->
+        <section id="menu" class="menu-section section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 50px;">
+                    <span class="section-subtitle">Our Culinary Selection</span>
+                    <h2 class="section-title">Menu Highlights</h2>
+                </div>
+
+                <!-- Menu Tabs -->
+                <div class="menu-tabs-wrapper">
+                    <div class="filter-labels-container">
+                        <label for="cat-all" class="filter-label">All Dishes</label>
+                        <label for="cat-starters" class="filter-label">Starters</label>
+                        <label for="cat-mains" class="filter-label">Mains</label>
+                        <label for="cat-specials" class="filter-label">Specials</label>
+                        <label for="cat-drinks" class="filter-label">Drinks/Desserts</label>
+                    </div>
+                </div>
+
+                <!-- Menu Grid -->
+                <div class="menu-grid">
+
+                    <!-- Card 1: Chilly Paneer (Starter) -->
+                    <div class="menu-card cat-starter">
+                        <div class="menu-img-wrapper">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5cef7b136434550001a53d10/1632310008744-TUO2GTTWCLX19KMO7D9G/honey+chilli+paneer-8+6.jpg"
+                                alt="Chilly Paneer">
+                            <span class="menu-badge">Popular</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3 class="menu-item-title">Chilly Paneer</h3>
+                                <span class="menu-item-price">₹300</span>
+                            </div>
+                            <p class="menu-item-desc">
+                                Crispy paneer cubes tossed in a sweet, sour, and spicy honey chilli glaze. Garnished
+                                with spring onions and toasted sesame.
+                            </p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-tag">Starter</span>
+                                <label for="booking-modal-toggle" class="btn btn-outline-gold"
+                                    style="padding: 0.4rem 1.2rem; font-size: 0.8rem;">Order Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Arabbiata Pasta (Main) -->
+                    <div class="menu-card cat-main">
+                        <div class="menu-img-wrapper">
+                            <img src="https://www.andy-cooks.com/cdn/shop/articles/20250710035519-andy-20cooks-20-20quick-20arrabbiata-20pasta-20recipe_daf853ef-dee8-4da0-8701-b8dda36397bf.jpg?v=1773806187"
+                                alt="Arabbiata Pasta">
+                            <span class="menu-badge">Signature</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3 class="menu-item-title">Arabbiata Pasta</h3>
+                                <span class="menu-item-price">₹450</span>
+                            </div>
+                            <p class="menu-item-desc">
+                                Al dente pasta tossed in a fiery, rich garlic tomato sauce infused with chili flakes and
+                                fresh basil. A classic Italian masterpiece.
+                            </p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-tag">Main Course</span>
+                                <label for="booking-modal-toggle" class="btn btn-outline-gold"
+                                    style="padding: 0.4rem 1.2rem; font-size: 0.8rem;">Order Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Chilli Garlic Noodles (Main) -->
+                    <div class="menu-card cat-main">
+                        <div class="menu-img-wrapper">
+                            <img src="https://www.whiskaffair.com/wp-content/uploads/2020/02/Chilli-Garlic-Noodles-2-3.jpg"
+                                alt="Chilli Garlic Noodles">
+                            <span class="menu-badge">Spicy</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3 class="menu-item-title">Chilli Garlic Noodles</h3>
+                                <span class="menu-item-price">₹300</span>
+                            </div>
+                            <p class="menu-item-desc">
+                                Wok-tossed noodles flavored with a hot and zesty chili paste, caramelized garlic cloves,
+                                fresh bell peppers, and greens.
+                            </p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-tag">Main Course</span>
+                                <label for="booking-modal-toggle" class="btn btn-outline-gold"
+                                    style="padding: 0.4rem 1.2rem; font-size: 0.8rem;">Order Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Drums of Heaven (Special) -->
+                    <div class="menu-card cat-special">
+                        <div class="menu-img-wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPwJOR75XWsmm2Q53EBCrnL6yGYJjaOBytBpPSY1Cgtg&s=10"
+                                alt="Drums of Heaven" ;>
+                            <span class="menu-badge">Chef's Choice</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3 class="menu-item-title">Drums of Heaven</h3>
+                                <span class="menu-item-price">₹500</span>
+                            </div>
+                            <p class="menu-item-desc">
+                                A divine blend of tender chicken, smoky bacon, and melted cheese, layered between
+                                toasted brioche buns and served with a side of crispy fries.
+                            </p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-tag">Specialty</span>
+                                <label for="booking-modal-toggle" class="btn btn-outline-gold"
+                                    style="padding: 0.4rem 1.2rem; font-size: 0.8rem;">Order Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Caprese Panini (Special) -->
+                    <div class="menu-card cat-special">
+                        <div class="menu-img-wrapper">
+                            <img src="https://plantedinthekitchen.com/wp-content/uploads/2022/01/Vegan-Caprese-Panini-1.jpg"
+                                alt="Caprese Panini" ;>
+                            <span class="menu-badge">Classic</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3 class="menu-item-title">Caprese Panini</h3>
+                                <span class="menu-item-price">₹380</span>
+                            </div>
+                            <p class="menu-item-desc">
+                                A delightful combination of fresh mozzarella, ripe tomatoes, and aromatic basil, grilled
+                                to perfection and served on a toasted ciabatta.
+                            </p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-tag">Specialty</span>
+                                <label for="booking-modal-toggle" class="btn btn-outline-gold"
+                                    style="padding: 0.4rem 1.2rem; font-size: 0.8rem;">Order Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Mango Mint Fizz (Drink) -->
+                    <div class="menu-card cat-drinks">
+                        <div class="menu-img-wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpERM_0XYl0puRh2ud1TwDwsDINUCWof7ijcniKcU9opbKD3NXIIjqhRA&s=10"
+                                alt=" Mango Mint Fizz">;
+                            <span class="menu-badge">Refreshing</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3 class="menu-item-title">Mango Mint Fizz</h3>
+                                <span class="menu-item-price">₹150</span>
+                            </div>
+                            <p class="menu-item-desc">
+                                Fresh mango puree combined with crisp club soda, crushed mint leaves, lime juice, and a
+                                drizzle of organic honey.
+                            </p>
+                            <div class="menu-card-footer">
+                                <span class="menu-item-tag">Drink</span>
+                                <label for="booking-modal-toggle" class="btn btn-outline-gold"
+                                    style="padding: 0.4rem 1.2rem; font-size: 0.8rem;">Order Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Specials Section -->
+        <section id="specials" class="specials-section section-padding">
+            <div class="container">
+                <div class="specials-layout">
+                    <div class="specials-info">
+                        <span class="section-subtitle">Today's Gourmet Recommendation</span>
+                        <h2 class="section-title" style="margin-bottom: 25px;">Chef's Special Choice</h2>
+
+                        <div class="specials-price-tag">
+                            <span>Drums of Heaven</span>
+                            <span style="opacity: 0.5;">|</span>
+                            <span style="color: var(--text-primary);">₹500</span>
+                        </div>
+
+                        <p class="specials-desc">
+                            Enjoy our Drums of Heaven, featuring tender chicken, smoky bacon, and melted cheese, layered
+                            between toasted brioche buns and served with a side of crispy fries. A divine blend that
+                            will satisfy your taste buds.
+                        </p>
+
+                        <div class="specials-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">✨</span>
+                                <div class="feature-text">
+                                    <h5>Fresh Catch</h5>
+                                    <p>Premium ingredients sourced daily.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🌶️</span>
+                                <div class="feature-text">
+                                    <h5>Custom Spice</h5>
+                                    <p>Tuned exactly to your preference.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label for="booking-modal-toggle" class="btn btn-primary">Book Table to Try</label>
+                    </div>
+
+                    <div class="specials-media">
+                        <div class="specials-img-box">
+                            <img src="https://myfoodstory.com/wp-content/uploads/2020/05/Drums-of-Heaven-3.jpg"
+                                alt="Drums of Heaven Dish" style="filter: brightness(1.05) contrast(1.1);">
+                            <!-- Absolute badged info card -->
+                            <div class="specials-overlay-badge">
+                                <h4> Drums of Heaven</h4>
+                                <p>Also available today as a premium alternate specialty dish.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chef Team Section -->
+        <section id="chefs" class="chef-section section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 50px;">
+                    <span class="section-subtitle">Meet Our Masters</span>
+                    <h2 class="section-title">Culinary Experts</h2>
+                </div>
+
+                <div class="chef-grid">
+
+                    <!-- Chef 1 -->
+                    <div class="chef-card">
+                        <div class="chef-img-box">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuSg2yVN9BW7dQ9RN95RzpYrGcX-rqYwzvVpVvO-HTa5jMpQBHBbVjVPY&s=10"
+                                alt="Chef Massimo Bottura" style="filter: grayscale(0.5) contrast(1.2);">
+
+                            <!-- Hover Overlay with Details -->
+                            <div class="chef-overlay-details">
+                                <span class="chef-signature-title">Signature dish</span>
+                                <h4 class="chef-signature-dish"> Arrabiata Pasta</h4>
+                                <p class="chef-quote">"Cooking is a language that expresses harmony, beauty, complexity,
+                                    and simplicity."</p>
+                            </div>
+                        </div>
+                        <div class="chef-info">
+                            <h3 class="chef-name"> Massimo Bottura</h3>
+                            <span class="chef-role">Executive Chef</span>
+                        </div>
+                    </div>
+
+                    <!-- Chef 2 -->
+                    <div class="chef-card">
+                        <div class="chef-img-box">
+                            <img src="https://dam.mediacorp.sg/image/upload/s--IC86elcu--/c_crop,h_1000,w_1333,x_167,y_124/c_fill,g_auto,h_622,w_830/f_auto,q_auto/v1/mediacorp/cna/image/2025/09/01/hero-chef-edward-lee-at-capella-singapore-2_culinary_class_wars_chef_edward_lee_interview.jpg?itok=d3_Sd0Js"
+                                alt="Chef Edward Lee" style="filter: grayscale(0.5) contrast(1.2);">
+
+                            <!-- Hover Overlay with Details -->
+                            <div class="chef-overlay-details">
+                                <span class="chef-signature-title">Signature dish</span>
+                                <h4 class="chef-signature-dish">Chilli Garlic Noodles</h4>
+                                <p class="chef-quote">"Precision, timing, and respectful treatment of local ingredients
+                                    define fine-dining."</p>
+                            </div>
+                        </div>
+                        <div class="chef-info">
+                            <h3 class="chef-name">Chef Edward Lee</h3>
+                            <span class="chef-role">Sous Chef</span>
+                        </div>
+                    </div>
+
+                    <!-- Chef 3 -->
+                    <div class="chef-card">
+                        <div class="chef-img-box">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaepKPAoZeoFY7xURGKuHzdM8LbO4qr0ABrIxodPq9X1cMPdJobbdA2Ug&s=10"
+                                alt="Chef Antoine" style="filter: grayscale(0.5) contrast(1.2);">
+
+                            <!-- Hover Overlay with Details -->
+                            <div class="chef-overlay-details">
+                                <span class="chef-signature-title">Signature dish</span>
+                                <h4 class="chef-signature-dish"> Caprese Panini</h4>
+                                <p class="chef-quote">"We build memories through aromas, textures, temperatures, and
+                                    colors."</p>
+                            </div>
+                        </div>
+                        <div class="chef-info">
+                            <h3 class="chef-name"> Jeff Mauro</h3>
+                            <span class="chef-role">Pastry/Chef de Partie</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews & Interactive Stars Section -->
+        <section id="reviews" class="reviews-section section-padding">
+            <!-- Review Carousel Toggle Radios (Hidden) -->
+            <input type="radio" name="review-select" id="rev-1" checked class="hidden-toggle">
+            <input type="radio" name="review-select" id="rev-2" class="hidden-toggle">
+            <input type="radio" name="review-select" id="rev-3" class="hidden-toggle">
+
+            <div class="container">
+                <div class="reviews-layout">
+
+                    <!-- Left: Interactive Testimonials Slider -->
+                    <div class="reviews-carousel-container">
+                        <span class="section-subtitle" style="font-size: 0.9rem;">What they say</span>
+                        <h2 style="font-size: 2.2rem; margin-bottom: 30px;">Guest Testimonials</h2>
+
+                        <div class="carousel-slides-wrapper">
+
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide slide-1">
+                                <div class="slide-stars">★★★★★</div>
+                                <p class="slide-quote">
+                                    "The Chilli Paneer was absolutely outstanding! The blend of spice and sweet glaze is
+                                    incredible, and the dark-mode aesthetic of the dining space felt so premium."
+                                </p>
+                                <div class="slide-author">
+                                    <div class="author-info">
+                                        <h5>Priya R.</h5>
+                                        <p>Verified Gourmet Guest</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide slide-2">
+                                <div class="slide-stars">★★★★★</div>
+                                <p class="slide-quote">
+                                    "Impeccable table service, gorgeous atmosphere, and a Seafood Pasta that brings
+                                    genuine Italian coastal flavors. We will absolutely make this our weekly retreat."
+                                </p>
+                                <div class="slide-author">
+                                    <div class="author-info">
+                                        <h5>David M.</h5>
+                                        <p>Culinary Food Critic</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide slide-3">
+                                <div class="slide-stars">★★★★☆</div>
+                                <p class="slide-quote">
+                                    "A masterclass in culinary excellence. The Chilli Garlic Noodles had a delightful
+                                    char flavor, and the wine selection paired nicely with the rich, chef-driven
+                                    sauces."
+                                </p>
+                                <div class="slide-author">
+                                    <div class="author-info">
+                                        <h5>Sarah K.</h5>
+                                        <p>Local Gastronome</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Carousel Indicators -->
+                        <div class="carousel-indicators-container">
+                            <label for="rev-1" class="carousel-dot"></label>
+                            <label for="rev-2" class="carousel-dot"></label>
+                            <label for="rev-3" class="carousel-dot"></label>
+                        </div>
+                    </div>
+
+                    <!-- Right: CSS-only Interactive Star Rating Widget -->
+                    <div class="rate-us-box">
+                        <h3>Rate Your Experience</h3>
+                        <p>Have you dined with us recently? We would love to hear your feedback. Tap the stars below to
+                            share your experience.</p>
+
+                        <form class="star-rating-form" onsubmit="event.preventDefault();">
+                            <div class="star-rating-input-group">
+                                <!-- Star inputs are ordered backwards in HTML for the flex-direction reverse CSS trick -->
+                                <input type="radio" name="star-rating" id="rating-star-5"
+                                    class="hidden-toggle star-rating-radio">
+                                <label for="rating-star-5" title="5 Stars">&#9733;</label>
+
+                                <input type="radio" name="star-rating" id="rating-star-4"
+                                    class="hidden-toggle star-rating-radio">
+                                <label for="rating-star-4" title="4 Stars">&#9733;</label>
+
+                                <input type="radio" name="star-rating" id="rating-star-3"
+                                    class="hidden-toggle star-rating-radio">
+                                <label for="rating-star-3" title="3 Stars">&#9733;</label>
+
+                                <input type="radio" name="star-rating" id="rating-star-2"
+                                    class="hidden-toggle star-rating-radio">
+                                <label for="rating-star-2" title="2 Stars">&#9733;</label>
+
+                                <input type="radio" name="star-rating" id="rating-star-1"
+                                    class="hidden-toggle star-rating-radio">
+                                <label for="rating-star-1" title="1 Star">&#9733;</label>
+
+                                <!-- Dynamic feedback messages tied to selection in CSS -->
+                                <div class="rating-feedback-msg">
+                                    <span class="feedback-text feedback-5">✨ Outstanding! We're thrilled to serve
+                                        you.</span>
+                                    <span class="feedback-text feedback-4">❤️ Thank you! We appreciate your
+                                        support.</span>
+                                    <span class="feedback-text feedback-3">👍 Thanks! We will strive to make it perfect
+                                        next time.</span>
+                                    <span class="feedback-text feedback-2">⚠️ Sorry for the gaps. We will contact you to
+                                        learn more.</span>
+                                    <span class="feedback-text feedback-1">😢 Oh no! Please write to us at
+                                        feedback@simpledinner.com.</span>
+                                </div>
+                            </div>
+
+                            <div class="booking-form-group" style="margin-bottom: 0;">
+                                <textarea class="booking-form-control" rows="3"
+                                    placeholder="Leave an optional comment..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary"
+                                style="align-self: flex-start; padding: 0.6rem 1.5rem; font-size: 0.85rem;">Submit
+                                Rating</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <a href="#" class="footer-logo">Simple<span>Dinner</span></a>
+                        <p class="footer-desc">
+                            Crafting culinary memories with fresh, premium ingredients, curated recipes, and a
+                            passionate culinary team.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="footer-links-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#menu">Our Menu</a></li>
+                            <li><a href="#specials">Today's Specials</a></li>
+                            <li><a href="#chefs">Culinary Team</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="footer-links-title">Open Hours</h4>
+                        <ul class="footer-info">
+                            <li><strong>Mon - Fri:</strong> 5:00 PM - 11:00 PM</li>
+                            <li><strong>Sat - Sun:</strong> 4:00 PM - Midnight</li>
+                            <li><strong>Address:</strong> 123 Gourmet Lane, Food District</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Simple Dinner Restaurant. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Table Reservation Modal Dialog Wrapper (Displays on toggle checked) -->
+        <div class="modal-overlay">
+            <div class="modal-content-box">
+                <!-- Close Button -->
+                <label for="booking-modal-toggle" class="modal-close-trigger">&times;</label>
+
+                <h3 class="modal-title">Book a Table</h3>
+                <p class="modal-subtitle">Provide details below to reserve your premium gourmet dining experience.</p>
+
+                <form class="booking-form"
+                    onsubmit="event.preventDefault(); alert('Reservation requested successfully! We look forward to hosting you.');">
+                    <div class="booking-form-group">
+                        <label class="booking-form-label">Full Name</label>
+                        <input type="text" class="booking-form-control" placeholder="ABC XYZ" required>
+                    </div>
+
+                    <div class="booking-row-grid">
+                        <div class="booking-form-group">
+                            <label class="booking-form-label">Email Address</label>
+                            <input type="email" class="booking-form-control" placeholder="abc@example.com" required>
+                        </div>
+                        <div class="booking-form-group">
+                            <label class="booking-form-label">Phone Number</label>
+                            <input type="tel" class="booking-form-control" placeholder="+91 xxxxxxxxxx" required>
+                        </div>
+                    </div>
+
+                    <div class="booking-row-grid">
+                        <div class="booking-form-group">
+                            <label class="booking-form-label">Party Size</label>
+                            <select class="booking-form-control" required style="-webkit-appearance: none;">
+                                <option value="1">1 Person</option>
+                                <option value="2" selected>2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5+ People</option>
+                            </select>
+                        </div>
+                        <div class="booking-form-group">
+                            <label class="booking-form-label">Dining Date</label>
+                            <input type="date" class="booking-form-control" required value="2026-07-08">
+                        </div>
+                    </div>
+
+                    <div class="booking-row-grid">
+                        <div class="booking-form-group">
+                            <label class="booking-form-label">Preferred Time</label>
+                            <select class="booking-form-control" required style="-webkit-appearance: none;">
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="19:00" selected>7:00 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                                <option value="22:00">10:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="booking-form-group">
+                            <label class="booking-form-label">Preferred Chef</label>
+                            <select class="booking-form-control" required style="-webkit-appearance: none;">
+                                <option value="any" selected>No Preference (Any Chef)</option>
+                                <option value="alessandro">Chef Massimo Bottura . (Signature )</option>
+                                <option value="meilin">Chef Edward Lee (Spicy/Wok)</option>
+                                <option value="antoine">Chef Jeff Mauro (Classic/Italian)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="booking-form-group">
+                        <label class="booking-form-label">Special Chef Requests / Details</label>
+                        <textarea class="booking-form-control" rows="2"
+                            placeholder="e.g. Allergies, gluten-free, or specific dish customizations..."></textarea>
+                    </div>
+
+                    <div class="submit-btn-container">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Reservation</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
